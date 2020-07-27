@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://xupbiu.github.io</id>
+    <id>http://xupbiu.github.io</id>
     <title>Gridea</title>
-    <updated>2020-07-27T12:13:29.753Z</updated>
+    <updated>2020-07-27T12:16:17.452Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://xupbiu.github.io"/>
-    <link rel="self" href="https://xupbiu.github.io/atom.xml"/>
+    <link rel="alternate" href="http://xupbiu.github.io"/>
+    <link rel="self" href="http://xupbiu.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://xupbiu.github.io/images/avatar.png</logo>
-    <icon>https://xupbiu.github.io/favicon.ico</icon>
+    <logo>http://xupbiu.github.io/images/avatar.png</logo>
+    <icon>http://xupbiu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://xupbiu.github.io/post/hello-gridea/</id>
-        <link href="https://xupbiu.github.io/post/hello-gridea/">
+        <id>http://xupbiu.github.io/post/hello-gridea/</id>
+        <link href="http://xupbiu.github.io/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
