@@ -3,14 +3,23 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Gridea配置介绍 | Xupbiu</title>
+<title>CMD中生成结构树 | Xupbiu</title>
 <link rel="stylesheet" href="http://xupbiu.github.io/styles/main.css">
 <script src="http://xupbiu.github.io/media/script.js"></script>
 
     
 
-  <meta name="description" content="
-这个自搭blog可以基于GitHub Page也可以Coding Page。后者腾讯平台不熟，想折腾去b站看教程(Gridea+Coding Page)。具体搭建流程总的来说就是下载应用平台，github建仓建Token，再二者互通一下就...">
+  <meta name="description" content="			E:.
+			├─core
+			├─dev
+			│  ├─al_devicechain
+			│  └─simulation
+			└─src
+
+
+在当前目录打开cmd命令行工具
+输入tree命令 -- 回车
+然后你就发现，你需要...">
   <script src="http://xupbiu.github.io/media/prism.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
@@ -87,17 +96,46 @@
 </div>
       <div class="mb-20 md:flex mt-10 lg:mt-6 md:border-t md:border-gray-400 md:pt-2 lg:border-t-0 lg:pt-0">
         <div class="w-full md:w-2/3 mt-6">
-          <h1 class="text-4xl">Gridea配置介绍</h1>
+          <h1 class="text-4xl">CMD中生成结构树</h1>
           
           <div class="mt-6 lg:mt-10 post-content">
-            <!-- more -->
-<p>这个自搭blog可以基于GitHub Page也可以Coding Page。后者腾讯平台不熟，想折腾去b站看教程(Gridea+Coding Page)。具体搭建流程总的来说就是下载应用平台，github建仓建Token，再二者互通一下就行具体见B站或者官方文稿。（有GitHub账号情况下，五分钟就好了）</p>
-<p>在此比较重要的，给想新入坑的朋友介绍就是：</p>
+            <pre><code>			E:.
+			├─core
+			├─dev
+			│  ├─al_devicechain
+			│  └─simulation
+			└─src
+</code></pre>
 <ol>
-<li>GitHub page在本地Chrome预览ok，但实际<strong>加载不出来</strong>的情况。这涉及到浏览器中对该网页安全加载项的判断，调白名单就行（因此，我认为这个blog以目前这样并不适合给大家分享给其他PC端用户自己的一些记录，自己愿意弄调成白名单可以当自己跨平台笔记阅读用）。</li>
-<li><strong>移动端</strong>可以自由访问。</li>
+<li>在当前目录打开<code>cmd</code>命令行工具</li>
+<li>输入<code>tree</code>命令 -- 回车<br>
+然后你就发现，你需要的结构树已经出现了，但是仔细看，会发现只显示文件夹。<br>
+如果想把当下的文件名也显示出来你只需要把命令改为<code>tree /f</code>，回车后发现，完美实现。<br>
+这时候如果你想把这个结构变成一个<code>txt</code>文本文件也很简单，只需要吧上边的命令改为<code>tree &gt; 名称.txt</code>，然后命令行中不会显示什么特殊信息，但是你到文件夹中会发现，你生成的文件已经出现了。</li>
 </ol>
-<p>大家有更好PC阅读问题解决方法欢迎邮件私戳我！</p>
+<h2 id="关于tree命令的选项">关于tree命令的选项</h2>
+<ul>
+<li><code>-a</code> 显示所有文件和目录。</li>
+<li><code>-A</code> 使用ASNI绘图字符显示树状图而非以ASCII字符组合。</li>
+<li><code>-C</code> 在文件和目录清单加上色彩，便于区分各种类型。</li>
+<li><code>-d</code> 显示目录名称而非内容。</li>
+<li><code>-D</code> 列出文件或目录的更改时间。</li>
+<li><code>-f</code> 在每个文件或目录之前，显示完整的相对路径名称。</li>
+<li><code>-F</code> 在执行文件，目录，Socket，符号连接，管道名称名称，各自加上”*”,”/”,”=”,”@”,”|”号。</li>
+<li><code>-g</code> 列出文件或目录的所属群组名称，没有对应的名称时，则显示群组识别码。</li>
+<li><code>-i</code> 不以阶梯状列出文件或目录名称。</li>
+<li><code>-I</code>&lt;范本样式&gt; 不显示符合范本样式的文件或目录名称。</li>
+<li><code>-l</code> 如遇到性质为符号连接的目录，直接列出该连接所指向的原始目录。</li>
+<li><code>-n</code> 不在文件和目录清单加上色彩。</li>
+<li><code>-N</code> 直接列出文件和目录名称，包括控制字符。</li>
+<li><code>-p</code> 列出权限标示。</li>
+<li><code>-P</code>&lt;范本样式&gt; 只显示符合范本样式的文件或目录名称。</li>
+<li><code>-q</code> 用”?”号取代控制字符，列出文件和目录名称。</li>
+<li><code>-s</code> 列出文件或目录大小。</li>
+<li><code>-t</code> 用文件和目录的更改时间排序。</li>
+<li><code>-u</code> 列出文件或目录的拥有者名称，没有对应的名称时，则显示用户识别码。</li>
+<li><code>-x</code> 将范围局限在现行的文件系统中，若指定目录下的某些子目录，其存放于另一个文件系统上，则将该子目录予以排除在寻找范围外。</li>
+</ul>
 
           </div>
           
@@ -106,44 +144,28 @@
           <div class="w-full md:w-1/3">
             <div class="mt-6 md:pl-8">
               <h4 class="text-base font-thin text-gray-700 mb-2">发布时间</h4>
-              <div class="text-lg mb-6">31.08.2020</div>
+              <div class="text-lg mb-6">26.09.2020</div>
               <h4 class="text-base font-thin text-gray-700 mb-2">标签</h4>
               <div class="mb-6">
                 
-                  <a href="http://xupbiu.github.io/tag/I11yYxFfj/" class="py-1 px-4 border-gray-300 border text-sm inline-block text-gray-700 hover:text-gray-900 rounded mr-2 mb-2">Tech</a>
-                
-                  <a href="http://xupbiu.github.io/tag/EbiOkTxOC/" class="py-1 px-4 border-gray-300 border text-sm inline-block text-gray-700 hover:text-gray-900 rounded mr-2 mb-2">Gridea</a>
-                
               </div>
               <h4 class="text-base font-thin text-gray-700 mb-2">阅读时间</h4>
-              <div class="text-lg mb-6">1 min read</div>
+              <div class="text-lg mb-6">3 min read</div>
               <h4 class="text-base font-thin text-gray-700 mb-2">相关阅读</h4>
               <div class="border-b border-gray-400">
                 
 
   
-    
-      
-    
-      
-    
-  
 
   
-
-  
-    
-      
-    
-      
     
   
 
   
     
-      
-    
-      
+  
+
+  
     
   
 
